@@ -1,0 +1,22 @@
+{
+  "name": "user-activity-monitor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "mocha \"./{,!(node_modules)/**/}*.test.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://mephistopheles1010:lLRbs68HldU@github.com/mephistopheles1010/user-activity-monitor.git"
+  },
+  "author": "mephistopheles1010",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mephistopheles1010/user-activity-monitor/issues"
+  },
+  "homepage": "https://github.com/mephistopheles1010/user-activity-monitor#readme"
+}
