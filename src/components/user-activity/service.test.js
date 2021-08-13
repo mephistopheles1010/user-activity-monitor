@@ -22,22 +22,25 @@ describe('UserActivityService', () => {
       const addTrackPairSpy = chai.spy.on(dataAccessMocked, 'addTrackPair');
       const id = 'testId';
       const ip = 'testIp';
+      const currentISODate = (new Date).toISOString().split('T')[0];
       await userActivityService.track(id, ip);
-      expect(addTrackPairSpy).to.have.been.called.with(id, ip);
+      expect(addTrackPairSpy).to.have.been.called.with(currentISODate, id, ip);
     });
 
     it('if only id specified call data access layer method "addTrackId" with appropriate id', async () => {
       const addTrackIdSpy = chai.spy.on(dataAccessMocked, 'addTrackId');
       const id = 'testId';
+      const currentISODate = (new Date).toISOString().split('T')[0];
       await userActivityService.track(id);
-      expect(addTrackIdSpy).to.have.been.called.with(id);
+      expect(addTrackIdSpy).to.have.been.called.with(currentISODate, id);
     });
 
     it('if only ip specified call data access layer method "addTrackIp" with appropriate ip', async () => {
       const addTrackIpSpy = chai.spy.on(dataAccessMocked, 'addTrackIp');
       const ip = 'testIp';
+      const currentISODate = (new Date).toISOString().split('T')[0];
       await userActivityService.track(undefined, ip);
-      expect(addTrackIpSpy).to.have.been.called.with(ip);
+      expect(addTrackIpSpy).to.have.been.called.with(currentISODate, ip);
     });
 
     it('if no id and ip specified return false', async () => {

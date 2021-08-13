@@ -31,12 +31,13 @@ class UserActivityService {
    * @returns {boolean}
    */
   async track(id, ip) {
+    const date = this.#retrieveISODate(new Date());
     if (id && ip) {
-      return await this.#dataAccess.addTrackPair(id, ip);
+      return await this.#dataAccess.addTrackPair(date, id, ip);
     } else if (id) {
-      return await this.#dataAccess.addTrackId(id);
+      return await this.#dataAccess.addTrackId(date, id);
     } else if (ip) {
-      return await this.#dataAccess.addTrackIp(ip);
+      return await this.#dataAccess.addTrackIp(date, ip);
     }
     return false;
   }
