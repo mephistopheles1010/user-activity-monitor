@@ -67,7 +67,7 @@ class UserActivityService {
    * @description if user has been successfully tracked will return true in another cases returns false
    * @param {string} id 
    * @param {string} ip 
-   * @returns {boolean}
+   * @returns {Promise<boolean>}
    */
   async track(id, ip) {
     const date = this.#retrieveISODate(new Date());
@@ -94,7 +94,7 @@ class UserActivityService {
    * If date order is incorrect returns stats for today.
    * @param {string} startDate date(without time) string in ISO format
    * @param {string} endDate date(without time) string in ISO format
-   * @returns {UserActivityStats}
+   * @returns {Promise<UserActivityStats>}
    */
   async getStat(startDate, endDate) {
     const stat = {};
