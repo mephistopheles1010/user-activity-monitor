@@ -3,7 +3,7 @@
  * @description
  * @async
  * @callback AddPairInfoFunction
- * @param {string} date ISO string(only date, without time)
+ * @param {string} setId
  * @param {string} firstValue
  * @param {string} secondValue
  * @returns {Promise<boolean>}
@@ -13,7 +13,7 @@
  * @description
  * @async
  * @callback AddInfoFunction
- * @param {string} date ISO string(only date, without time)
+ * @param {string} setId
  * @param {string} value
  * @returns {Promise<boolean>}
  */
@@ -22,7 +22,7 @@
  * @description
  * @async
  * @callback GetDateInfoFunction
- * @param {string} date ISO string(only date, without time)
+ * @param {string} setId
  * @returns {Promise<number>}
  */
 
