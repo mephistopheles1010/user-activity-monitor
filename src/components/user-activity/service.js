@@ -65,6 +65,7 @@ class UserActivityService {
 
   /**
    * @description if user has been successfully tracked will return true in another cases returns false
+   * @public
    * @param {string} id 
    * @param {string} ip 
    * @returns {Promise<boolean>}
@@ -92,6 +93,7 @@ class UserActivityService {
    * If no endDate specified or incorrect returns stats for startDate.
    * If both are not specified or incorrect returns stats for today.
    * If date order is incorrect returns stats for today.
+   * @public
    * @param {string} startDate date(without time) string in ISO format
    * @param {string} endDate date(without time) string in ISO format
    * @returns {Promise<UserActivityStats>}
@@ -111,6 +113,7 @@ class UserActivityService {
    * If no endDate specified or incorrect returns startDate.
    * If both are not specified or incorrect returns today's date.
    * If date order is incorrect returns today's date.
+   * @private
    * @param {string} startDate date(without time) string in ISO format
    * @param {string} endDate date(without time) string in ISO format
    * @returns {Array<string>}
@@ -132,7 +135,7 @@ class UserActivityService {
    * @property {number} endDate parsed timestamp
    */
   /**
-   * 
+   * @private
    * @param {string} startDateISO 
    * @param {string} endDateISO 
    * @returns {ParsedRange}
@@ -163,6 +166,7 @@ class UserActivityService {
 
   /**
    * @description retrieve only date(without time) string in ISO format from Date instance
+   * @private
    * @param {Date} date 
    * @returns {string} date(without time) string in ISO format
    */
