@@ -6,7 +6,7 @@
  * @param {string} date ISO string(only date, without time)
  * @param {string} firstValue
  * @param {string} secondValue
- * @returns {Promise<void>}
+ * @returns {Promise<boolean>}
  */
 
 /**
@@ -15,7 +15,7 @@
  * @callback AddInfoFunction
  * @param {string} date ISO string(only date, without time)
  * @param {string} value
- * @returns {Promise<void>}
+ * @returns {Promise<boolean>}
  */
 
 /**
