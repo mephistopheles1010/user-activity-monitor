@@ -1,3 +1,39 @@
+//#region : describe UserActivityDataAccess interface
+/**
+ * @description
+ * @callback AddPairInfoFunction
+ * @param {string} date ISO string(only date, without time)
+ * @param {string} firstValue
+ * @param {string} secondValue
+ * @returns {void}
+ */
+
+/**
+ * @description
+ * @callback AddInfoFunction
+ * @param {string} date ISO string(only date, without time)
+ * @param {string} value
+ * @returns {void}
+ */
+
+/**
+ * @description
+ * @callback GetDateInfoFunction
+ * @param {string} date ISO string(only date, without time)
+ * @returns {number}
+ */
+
+
+/**
+ *
+ * @typedef {object} UserActivityStorage
+ * @property {AddPairInfoFunction} addTrackPair
+ * @property {AddInfoFunction} addTrackId
+ * @property {AddInfoFunction} addTrackIp
+ * @property {GetDateInfoFunction} getStat
+ */
+//#endregion : describe UserActivityDataAccess interface
+
 /**
  * @description service level for user activity component
  * @class
