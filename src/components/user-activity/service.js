@@ -1,26 +1,29 @@
 //#region : describe UserActivityDataAccess interface
 /**
  * @description
+ * @async
  * @callback AddPairInfoFunction
  * @param {string} date ISO string(only date, without time)
  * @param {string} firstValue
  * @param {string} secondValue
- * @returns {void}
+ * @returns {Promise<void>}
  */
 
 /**
  * @description
+ * @async
  * @callback AddInfoFunction
  * @param {string} date ISO string(only date, without time)
  * @param {string} value
- * @returns {void}
+ * @returns {Promise<void>}
  */
 
 /**
  * @description
+ * @async
  * @callback GetDateInfoFunction
  * @param {string} date ISO string(only date, without time)
- * @returns {number}
+ * @returns {Promise<number>}
  */
 
 
