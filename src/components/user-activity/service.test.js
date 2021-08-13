@@ -65,7 +65,20 @@ describe('UserActivityService', () => {
       expect(getStatSpy).to.have.been.called.exactly(3);
     });
 
-    it('if no startDate date specified or incorrect call data access layer method "getStat" with endDate', async () => {
+    it('if no startDate date specified call data access layer method "getStat" with endDate', async () => {
+      const getStatSpy = chai.spy.on(dataAccessMocked, 'getStat');
+      const dates = [
+        undefined,
+        '2020-08-13',
+        '2020-08-14',
+      ];
+      await userActivityService.getStat(dates[0], dates[2]);
+      chai.spy.restore(dataAccessMocked);
+      expect(getStatSpy).to.have.been.first.called.with(dates[2]);
+      expect(getStatSpy).to.have.been.called.exactly(1);
+    });
+
+    it('if startDate incorrect call data access layer method "getStat" with endDate', async () => {
       const getStatSpy = chai.spy.on(dataAccessMocked, 'getStat');
       const dates = [
         '2020-08-124',
@@ -78,7 +91,20 @@ describe('UserActivityService', () => {
       expect(getStatSpy).to.have.been.called.exactly(1);
     });
 
-    it('if no endDate specified or incorrect call data access layer method "getStat" with startDate', async () => {
+    it('if no endDate specified call data access layer method "getStat" with startDate', async () => {
+      const getStatSpy = chai.spy.on(dataAccessMocked, 'getStat');
+      const dates = [
+        '2020-08-12',
+        '2020-08-13',
+        undefined,
+      ];
+      await userActivityService.getStat(dates[0], dates[2]);
+      chai.spy.restore(dataAccessMocked);
+      expect(getStatSpy).to.have.been.first.called.with(dates[0]);
+      expect(getStatSpy).to.have.been.called.exactly(1);
+    });
+
+    it('if endDate incorrect call data access layer method "getStat" with startDate', async () => {
       const getStatSpy = chai.spy.on(dataAccessMocked, 'getStat');
       const dates = [
         '2020-08-12',
@@ -91,7 +117,21 @@ describe('UserActivityService', () => {
       expect(getStatSpy).to.have.been.called.exactly(1);
     });
 
-    it('if both are not specified or incorrect call data access layer method "getStat" with today\' date', async () => {
+    it('if startDate and endDate are not specified call data access layer method "getStat" with today\'s date', async () => {
+      const getStatSpy = chai.spy.on(dataAccessMocked, 'getStat');
+      const dates = [
+        undefined,
+        '2020-08-13',
+        undefined,
+      ];
+      await userActivityService.getStat(dates[0], dates[2]);
+      chai.spy.restore(dataAccessMocked);
+      const currentISODate = (new Date).toISOString().split('T')[0];
+      expect(getStatSpy).to.have.been.first.called.with(currentISODate);
+      expect(getStatSpy).to.have.been.called.exactly(1);
+    });
+
+    it('if startDate and endDate are incorrect call data access layer method "getStat" with today\'s date', async () => {
       const getStatSpy = chai.spy.on(dataAccessMocked, 'getStat');
       const dates = [
         '2020-08-125',
@@ -105,7 +145,7 @@ describe('UserActivityService', () => {
       expect(getStatSpy).to.have.been.called.exactly(1);
     });
 
-    it('If date order is incorrect call data access layer method "getStat" with today\' date', async () => {
+    it('if date order is incorrect call data access layer method "getStat" with today\'s date', async () => {
       const getStatSpy = chai.spy.on(dataAccessMocked, 'getStat');
       const dates = [
         '2020-08-14',
