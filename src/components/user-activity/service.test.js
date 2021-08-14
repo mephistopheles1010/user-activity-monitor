@@ -24,6 +24,7 @@ describe('UserActivityService', () => {
       const ip = 'testIp';
       const currentISODate = (new Date).toISOString().split('T')[0];
       await userActivityService.track(id, ip);
+      chai.spy.restore(dataAccessMocked);
       expect(addTrackPairSpy).to.have.been.called.with(currentISODate, id, ip);
     });
 
@@ -32,6 +33,7 @@ describe('UserActivityService', () => {
       const id = 'testId';
       const currentISODate = (new Date).toISOString().split('T')[0];
       await userActivityService.track(id);
+      chai.spy.restore(dataAccessMocked);
       expect(addTrackIdSpy).to.have.been.called.with(currentISODate, id);
     });
 
@@ -40,6 +42,7 @@ describe('UserActivityService', () => {
       const ip = 'testIp';
       const currentISODate = (new Date).toISOString().split('T')[0];
       await userActivityService.track(undefined, ip);
+      chai.spy.restore(dataAccessMocked);
       expect(addTrackIpSpy).to.have.been.called.with(currentISODate, ip);
     });
 
