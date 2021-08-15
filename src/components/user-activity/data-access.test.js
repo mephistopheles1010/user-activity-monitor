@@ -127,8 +127,6 @@ describe('UserActivityDataAccess', () => {
       expect(stat).to.be.equal(0);
     });
 
-    //getStat(setId) => 
-    //this.#storage.getSetCardinality(idSetName) + this.#storage.getSetCardinality(ipWithoutIdSetName)
     it(`call data access layer methods "getSetCardinality" for id set and ip(without id) set
         and return sum of their results`, async () => {
       const currentISODate = (new Date).toISOString().split('T')[0];
