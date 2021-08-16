@@ -14,7 +14,7 @@ npm test
 
 ## Start
 simple start: npm start  
-or as a daemon pm2 start startup.pm2.json  
+or as a daemon: pm2 start startup.pm2.json  
 
 ## Dependencies
 
