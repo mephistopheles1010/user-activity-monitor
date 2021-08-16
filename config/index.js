@@ -9,8 +9,11 @@ config.server = {
 config.redis = {
   host: env.REDIS_HOST,
   port: env.REDIS_PORT,
-  db: env.REDIS_DB,
 };
+
+if(env.REDIS_DB){
+  config.redis.db = env.REDIS_DB
+}
 
 if (env.REDIS_USER && env.REDIS_PASSWORD) {
   config.redis.user = env.REDIS_USER,
