@@ -1,23 +1,30 @@
 # user-activity-monitor
-//FIXME: description
+service for tracking user activity
 
 ## Setup
-
-//FIXME: description
+first setup and startup redis server
+create .env file in the root of a project(can simple gen a template with ./deploy/scripts/gen-env-template.sh)
+configure .env file according to your environment
+npm install
 
 ## Tests
 
+npm install
 npm test
 
 ## Start
-
-//FIXME: description
+simple start: npm start  
+or as a daemon pm2 start startup.pm2.json  
 
 ## Dependencies
 
 mocha  
 chai  
 chai-spies  
+sinon  
+dotenv  
+express  
+redis  
 
 ## Versioning
 
