@@ -27,7 +27,7 @@
 //#endregion : describe Logger config interface
 
 /**
- * console implimentation of logger interface
+ * @description console implimentation of logger interface
  */
 class ConsoleAdapter {
   /**
@@ -57,6 +57,7 @@ class ConsoleAdapter {
 
   /**
    * @description debug level log
+   * @public
    * @param {string} msg
    * @returns {void}
    */
@@ -66,6 +67,7 @@ class ConsoleAdapter {
 
   /**
    * @description info level log
+   * @public
    * @param {string} msg
    * @returns {void}
    */
@@ -75,6 +77,7 @@ class ConsoleAdapter {
 
   /**
    * @description warn level log
+   * @public
    * @param {string} msg
    * @returns {void}
    */
@@ -84,6 +87,7 @@ class ConsoleAdapter {
 
   /**
    * @description error level log
+   * @public
    * @param {string} msg
    * @returns {void}
    */
@@ -92,7 +96,7 @@ class ConsoleAdapter {
   }
 
   /**
-   * 
+   * @private
    * @param {string} level 
    * @param {string} msg 
    * @returns  {string}
