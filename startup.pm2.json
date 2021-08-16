@@ -1,0 +1,16 @@
+{
+  "apps": [
+    {
+      "name": "user-activity-monitor",
+      "script": "index.js",
+      "out_file": "logs/user-activity-monitor.log",
+      "error_file": "logs/user-activity-monitor.errors.log",
+      "watch": [
+        "config",
+        "src",
+        "index.js"
+      ],
+      "node_args": "-r dotenv/config"
+    }
+  ]
+}
