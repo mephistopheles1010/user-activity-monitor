@@ -3,7 +3,7 @@
 kernel="2.6.39";
 distro="xyz";
 
-cat > /etc/myconfig.conf << EOL
+cat > ./.env << EOL
 #base
 NODE_ENV = 'development'
 
