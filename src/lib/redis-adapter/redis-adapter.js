@@ -8,7 +8,7 @@ class RedisAdapter {
    * @static
    * @param {RedisClient} redisClient
    */
-  static instatntiate(redisClient) {
+  static instantiate(redisClient) {
     return new RedisAdapter(redisClient);
   }
 
