@@ -2,7 +2,7 @@
 service for tracking user activity  
 
 ## Setup
-first setup and startup redis server
+first setup and startup redis server  
 create .env file in the root of a project(can simple gen a template with ./deploy/scripts/gen-env-template.sh)  
 configure .env file according to your environment  
 npm install
