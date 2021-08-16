@@ -9,7 +9,7 @@ const config = require('./config');
 const Logger = require('./src/lib/logger');
 const RedisAdapter = require('./src/lib/redis-adapter');
 const ResponseBody = require('./src/lib/response-body');
-const { UserActivityDataAccess, UserActivityService, UserActivityRouter } = require('../components/user-activity');
+const { UserActivityDataAccess, UserActivityService, UserActivityRouter } = require('./src/components/user-activity');
 //#endregion : internal imports
 
 //#region : set infrastructure and domain interaction
