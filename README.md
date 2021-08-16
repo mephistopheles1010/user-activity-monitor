@@ -5,6 +5,7 @@ service for tracking user activity
 first setup and startup redis server  
 create .env file in the root of a project(can simple gen a template with ./deploy/scripts/gen-env-template.sh)  
 configure .env file according to your environment  
+if you intend to start service with pm2 configure log directory path in startup.pm2.json  
 npm install
 
 ## Tests
