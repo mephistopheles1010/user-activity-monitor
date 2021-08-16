@@ -103,7 +103,7 @@ class ConsoleAdapter {
    */
   #composeMessage(level, msg) {
     const date = new Date();
-    return `${date.toISOString()}: ${level}: ${this.#config.hostName}: ${this.#config.serviceName}]: ${msg}`
+    return `${date.toISOString()}: ${level}: ${this.#config.hostName}: ${this.#config.serviceName}: ${msg}`
   }
 
 }

@@ -39,7 +39,7 @@ describe('ConsoleAdapter', () => {
       const msg = 'testMsg';
       consoleAdapter.debug(msg);
       chai.spy.restore(consoleMocked);
-      expect(logSpy).to.have.been.called.with(`${(new Date).toISOString()}: debug: ${config.hostName}: ${config.serviceName}]: ${msg}`);
+      expect(logSpy).to.have.been.called.with(`${(new Date).toISOString()}: debug: ${config.hostName}: ${config.serviceName}: ${msg}`);
     });
 
   });
@@ -50,7 +50,7 @@ describe('ConsoleAdapter', () => {
       const msg = 'testMsg';
       consoleAdapter.info(msg);
       chai.spy.restore(consoleMocked);
-      expect(logSpy).to.have.been.called.with(`${(new Date).toISOString()}: info: ${config.hostName}: ${config.serviceName}]: ${msg}`);
+      expect(logSpy).to.have.been.called.with(`${(new Date).toISOString()}: info: ${config.hostName}: ${config.serviceName}: ${msg}`);
     });
   });
 
@@ -60,7 +60,7 @@ describe('ConsoleAdapter', () => {
       const msg = 'testMsg';
       consoleAdapter.warn(msg);
       chai.spy.restore(consoleMocked);
-      expect(logSpy).to.have.been.called.with(`${(new Date).toISOString()}: warn: ${config.hostName}: ${config.serviceName}]: ${msg}`);
+      expect(logSpy).to.have.been.called.with(`${(new Date).toISOString()}: warn: ${config.hostName}: ${config.serviceName}: ${msg}`);
     });
   });
 
@@ -70,7 +70,7 @@ describe('ConsoleAdapter', () => {
       const msg = 'testMsg';
       consoleAdapter.error(msg);
       chai.spy.restore(consoleMocked);
-      expect(logSpy).to.have.been.called.with(`${(new Date).toISOString()}: error: ${config.hostName}: ${config.serviceName}]: ${msg}`);
+      expect(logSpy).to.have.been.called.with(`${(new Date).toISOString()}: error: ${config.hostName}: ${config.serviceName}: ${msg}`);
     });
   });
 });
