@@ -2,7 +2,7 @@
 service for tracking user activity  
 endpoints:  
   track: /api/user-activity/track?id={ID}  
-  stat: /api/user-activity/stat?startDate={START_DATE}&endDate={END_DATE}  
+  stat: /api/user-activity/stat?startDate={ISO_START_DATE}&endDate={ISO_END_DATE}  
 
 ## Setup
 first setup and startup redis server  
