@@ -1,15 +1,15 @@
 # user-activity-monitor
-service for tracking user activity
+service for tracking user activity  
 
 ## Setup
 first setup and startup redis server
-create .env file in the root of a project(can simple gen a template with ./deploy/scripts/gen-env-template.sh)
-configure .env file according to your environment
+create .env file in the root of a project(can simple gen a template with ./deploy/scripts/gen-env-template.sh)  
+configure .env file according to your environment  
 npm install
 
 ## Tests
 
-npm install
+npm install  
 npm test
 
 ## Start
@@ -28,7 +28,7 @@ redis
 
 ## Versioning
 
-1.0.0
+1.0.0  
 
 
 
