@@ -34,7 +34,7 @@ describe('ConsoleAdapter', () => {
   });
 
   describe('debug', () => {
-    it(`call console.log with appropriate msg`, async () => {
+    it(`call console.log with appropriate msg`, () => {
       const logSpy = chai.spy.on(consoleMocked, 'log');
       const msg = 'testMsg';
       consoleAdapter.debug(msg);
@@ -45,7 +45,7 @@ describe('ConsoleAdapter', () => {
   });
 
   describe('info', () => {
-    it(`call console.log with appropriate msg`, async () => {
+    it(`call console.log with appropriate msg`, () => {
       const logSpy = chai.spy.on(consoleMocked, 'log');
       const msg = 'testMsg';
       consoleAdapter.info(msg);
@@ -55,7 +55,7 @@ describe('ConsoleAdapter', () => {
   });
 
   describe('warn', () => {
-    it(`call console.log with appropriate msg`, async () => {
+    it(`call console.log with appropriate msg`, () => {
       const logSpy = chai.spy.on(consoleMocked, 'log');
       const msg = 'testMsg';
       consoleAdapter.warn(msg);
@@ -65,7 +65,7 @@ describe('ConsoleAdapter', () => {
   });
 
   describe('error', () => {
-    it(`call console.log with appropriate msg`, async () => {
+    it(`call console.log with appropriate msg`, () => {
       const logSpy = chai.spy.on(consoleMocked, 'log');
       const msg = 'testMsg';
       consoleAdapter.error(msg);
