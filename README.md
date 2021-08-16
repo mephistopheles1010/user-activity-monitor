@@ -1,5 +1,8 @@
 # user-activity-monitor
 service for tracking user activity  
+endpoints:  
+  track: /api/user-activity/track?id={ID}  
+  stat: /api/user-activity/stat?startDate={START_DATE}&endDate={END_DATE}  
 
 ## Setup
 first setup and startup redis server  
