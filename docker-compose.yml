@@ -1,0 +1,10 @@
+version: '3'
+services:
+  redis-server: 
+    image: 'redis'
+  node-app:
+    image: 'mephistopheles1010/user-activity-monitor'
+    env_file:
+      - .env
+    ports:
+      - "8080:8877"
